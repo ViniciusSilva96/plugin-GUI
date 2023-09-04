@@ -36,7 +36,7 @@ void BandpassFilterSettings::createFilters(int numChannels, float sampleRate_, d
     {
         filters.add(new Dsp::SmoothedFilterDesign
             <Dsp::Butterworth::Design::BandPass    // design type
-            <2>,                                   // order
+            <5>,                                   // order
             1,                                     // number of channels (must be const)
             Dsp::DirectFormII>(1));               // realization
 
@@ -57,7 +57,7 @@ void BandpassFilterSettings::setFilterParameters(double lowCut, double highCut, 
 {
     Dsp::Params params;
     params[0] = sampleRate;                 // sample rate
-    params[1] = 2;                          // order
+    params[1] = 5;                          // order
     params[2] = (highCut + lowCut) / 2;     // center frequency
     params[3] = highCut - lowCut;           // bandwidth
 
