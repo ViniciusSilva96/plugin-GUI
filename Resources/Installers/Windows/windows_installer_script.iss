@@ -1,7 +1,7 @@
 [Setup]
 AppName=Open Ephys
-AppVersion=0.6.5
-AppVerName=Open Ephys 0.6.5
+AppVersion=0.6.6
+AppVerName=Open Ephys 0.6.6
 AppCopyright=Copyright (C) 2010-2023, Open Ephys & Contributors
 AppPublisher=open-ephys.org
 AppPublisherURL=https://open-ephys.org/gui
@@ -34,6 +34,7 @@ Name: "{autoprograms}\Open Ephys"; Filename: "{app}\open-ephys.exe"
 
 [Run]
 Filename: "{tmp}\FrontPanelUSB-DriverOnly-4.5.5.exe"; StatusMsg: "Installing Front Panel USB driver..."; Tasks: install_usb; Flags: skipifsilent
+Filename: "{app}\open-ephys.exe"; Description: "Launch Open Ephys GUI"; Flags: postinstall nowait skipifsilent
 
 [Code]
 // types and variables
